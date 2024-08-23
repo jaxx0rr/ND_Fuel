@@ -53,7 +53,7 @@ end
 -- Setting the fuel to the vehicle entity using decor.
 function SetFuel(vehicle, fuel)
 	if type(fuel) == "number" and fuel >= 0 and fuel <= 100 then
-		SetVehicleFuelLevel(vehicle, fuel)
+		SetVehicleFuelLevel(vehicle, fuel + 0.0)
 		DecorSetFloat(vehicle, FUEL_DECOR, GetVehicleFuelLevel(vehicle))
 	end
 end
